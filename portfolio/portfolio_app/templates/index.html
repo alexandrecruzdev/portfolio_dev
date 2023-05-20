@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@900&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <title>Portfólio | Alexandre Cruz - Desenvolvedor Web</title>
+</head>
+
+<body>
+    <div id="nav">
+        <div id="header">
+            <h1 id="logo">AC</h1>
+
+            <img id="menu_button" width="48px" height="48px" src="{% static 'img/menu.png'%}">
+        </div>
+        <div id="menu_container">
+
+            <ul>
+                <center>
+                    <li>Inicio</li>
+                    <li>Sobre</li>
+                    <li>Projetos</li>
+                    <li>Contatos</li>
+                </center>
+
+            </ul>
+
+        </div>
+    </div>
+    <div id="home_container">
+        <div id="perfil">
+            <img src="{% static 'img/me.png' %}">
+            <h1>Olá, Eu sou o Alexandre !</h1>
+            <h3>Desenvolvedor Web</h3>
+        </div>
+        <div id="container_button">
+            <input type="button" class="btn_cheio" value="Download CV">
+            <input type="button" class="btn_vazio" value="Entre em contato">
+        </div>
+    </div>
+
+    <div id="container_sobre">
+        <h1>Olá, Eu sou o Alexandre. Prazer em conhece-lo!</h1>
+        <p>Desenvolvedor Web com experiência em Python, Django, Postgresql, JavaScript.
+            Estudante de Sistemas de Informação, cursando o 6º período e sou um apaixonado por tecnologia.
+            Estou em busca de um estágio para além da obrigatoriedade da grade,
+            mas com o objetivo de crescimento pessoal e profissional através de novos desafios. 
+            Além disso, atuo como freelancer desenvolvendo aplicações web.
+            </p>
+    </div>
+    <div id="container_habilidades">
+        <h1>HABILIDADES</h1>
+        <div class="container_cards">
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+            <div class="card_habilidade">
+                <div class="circle_habilidade"></div>
+                <div class="nome_habilidade">HTML</div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    <script src="{% static 'js/menu.js'%}"></script>
+</body>
+
+</html>
