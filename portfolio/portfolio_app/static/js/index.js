@@ -20,3 +20,9 @@ menu_button.addEventListener('click',()=>{
 
    
 })
+
+const closeMenu = () => {
+   menu_container.style.height = "0px"
+   menu_button.src = "static/img/menu.png"
+   // alert('teste')
+}

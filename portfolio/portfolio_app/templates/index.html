@@ -18,7 +18,7 @@
 <body>
     <div id="nav">
         <div id="header">
-            <h1 id="logo">AC</h1>
+            <h1 id="logo" style="font-size:5vw;">AC</h1>
 
             <img id="menu_button" width="48px" height="48px" src="{% static 'img/menu.png'%}">
         </div>
@@ -26,11 +26,11 @@
 
             <ul>
                 <center>
-                   <a href="#home_container"> <li>Inicio</li></a>
-                   <a href="#container_sobre"> <li>Sobre</li></a>
-                   <a href="#container_habilidades"> <li>Habilidades</li></a>
-                   <a href="#container_projetos"> <li>Projetos</li></a>
-                   <a href="#container_contatos"> <li>Contatos</li></a>
+                   <a href="#home_container" onclick="closeMenu()"><li>Inicio</li></a>
+                   <a href="#container_sobre" onclick="closeMenu()"><li>Sobre</li></a>
+                   <a href="#container_habilidades" onclick="closeMenu()"><li>Habilidades</li></a>
+                   <a href="#container_projetos" onclick="closeMenu()"><li>Projetos</li></a>
+                   <a href="#container_contatos" onclick="closeMenu()"><li>Contatos</li></a>
                 </center>
 
             </ul>
@@ -44,8 +44,12 @@
             <h3>Desenvolvedor Web</h3>
         </div>
         <div id="container_button">
-            <input type="button" class="btn_cheio" value="Download CV">
-            <input type="button" class="btn_vazio" value="Entre em contato">
+            <a href="../static/img/Alexandre Cruz - Currículo.pdf" download>
+                <input type="button" class="btn_cheio" value="Download CV">
+            </a>
+            <a href="https://web.whatsapp.com/send?phone=5521996924975"  target="_blank">
+                <input type="button" class="btn_vazio" value="Entre em contato">
+            </a>
         </div>
     </div>
 
@@ -78,7 +82,7 @@
         {% for projeto in projetos %}
         <div class="container_projeto_window">
             <div class="projeto_window" >
-                <img src="../../media/{{projeto.imagem}}" width="498px" height="250px">
+                <img src="../../media/{{projeto.imagem}}" width="298px" height="150px">
                 <a href="{{projeto.url}}" class="btn_cheio_projeto_window">Ver mais</a>
             </div>
         </div>

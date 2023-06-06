@@ -5,6 +5,8 @@ html {
 
 }
 
+
+
 a {
     text-decoration: none;
 }
@@ -31,6 +33,10 @@ body {
     /* padding: 10px; */
     
 
+}
+
+img {
+    max-width: 100%;
 }
 #logo {
 /* font-style: normal; */
@@ -106,7 +112,15 @@ h3 {
 
 #perfil {
     text-align: center;
+    transition: 0.1s;
 }
+
+#perfil:hover {
+    text-align: center;
+    transition: 0.1s;
+    transform: scale(1.1);
+}
+
 
 #container_button {
     text-align: center;
@@ -189,9 +203,9 @@ h3 {
 #container_sobre {
     background-color: #6E07F3;
     color:white;
-    padding: 5% 10% 10% 10%;
+    padding: 5% 5% 10% 5%;
     text-align: center;
-    height: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -200,7 +214,7 @@ h3 {
 }
 #container_sobre p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     text-align: center;
 }
 
@@ -208,7 +222,7 @@ h3 {
     position: relative;
     width: 80%;
     margin: auto;
-    top: -50px;
+    top: -30px;
     background: #FFFFFF;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
@@ -303,6 +317,8 @@ flex-wrap: wrap;
     filter: brightness(50%);
     transition: 0.1s;
     margin:50px;
+    max-width: 90%;
+
 
 }
 
@@ -319,6 +335,8 @@ flex-wrap: wrap;
     filter: brightness(100%);
     transform: scale(1.1);
     margin:50px;
+    max-width: 90%;
+
 
 }
 
