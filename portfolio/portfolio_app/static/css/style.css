@@ -371,6 +371,7 @@ margin: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
  
 }
 
@@ -378,6 +379,8 @@ margin: 10px;
     display: flex;
     justify-content: center;
     align-content: center;
+    text-align: center;
+    
 }
 
 
