@@ -23,6 +23,7 @@ class Projeto(models.Model):
 class Contato(models.Model):
     contato = models.CharField(max_length=100)
     imagem = models.ImageField(upload_to='upload/contatos/')
+    link = models.CharField(max_length=100, default='')
     
 
     def __str__(self):

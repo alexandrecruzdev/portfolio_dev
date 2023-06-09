@@ -96,12 +96,35 @@
         <div class="circles_center">
             <div class="container_circle_contatos">
                 {% for contato in contatos %}
+
+                {% if contato.contato == 'alexandrecruzprimeiro@gmail.com' %}
+                <a href="mailto:alexandrecruzprimeiro@gmail.com" style="color: #141C3A" target="_blank">
+                    <div class="circle_contato_card">
+                        <div class="circle_contato">
+                            <img src="../../media/{{contato.imagem}}" width="28px" height="28px">
+                        </div>
+                        <h6 >{{contato.contato}}</h6>
+                    </div>
+                    </a>
+                {% else %}
+                {% if contanto.link != '' %}
+                <a href="{{contato.link}}" target="_blank">
                 <div class="circle_contato_card">
                     <div class="circle_contato">
                         <img src="../../media/{{contato.imagem}}" width="28px" height="28px">
                     </div>
-                    <h6 style="color: 141C3A;">{{contato.contato}}</h6>
+                    <h6>{{contato.contato}}</h6>
                 </div>
+                </a>
+                {% else %}
+                <div class="circle_contato_card">
+                    <div class="circle_contato">
+                        <img src="../../media/{{contato.imagem}}" width="28px" height="28px">
+                    </div>
+                    <h6 >{{contato.contato}}</h6>
+                </div>
+                {% endif %}
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
