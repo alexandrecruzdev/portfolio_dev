@@ -3,8 +3,8 @@ html {
 }
 
 a {
+  color:#141C3A;
   text-decoration: none;
-  font-size: 1rem;
 }
 
 body {
@@ -346,6 +346,7 @@ h3 {
   padding: 10px;
   border-radius: 8px;
   justify-content: center;
+  justify-items: center;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
@@ -355,6 +356,7 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  justify-items: center;
 }
 
 .circles_center {
