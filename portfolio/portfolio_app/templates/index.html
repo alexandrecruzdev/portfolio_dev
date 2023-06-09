@@ -18,44 +18,56 @@
 <body>
     <div id="nav">
         <div id="header">
-            <h1 id="logo" style="font-size:5vw;">AC</h1>
+            <h1 id="logo">AC</h1>
 
             <img id="menu_button" width="48px" height="48px" src="{% static 'img/menu.png'%}">
         </div>
         <div id="menu_container">
-
             <ul>
                 <center>
-                   <a href="#home_container" onclick="closeMenu()"><li>Inicio</li></a>
-                   <a href="#container_sobre" onclick="closeMenu()"><li>Sobre</li></a>
-                   <a href="#container_habilidades" onclick="closeMenu()"><li>Habilidades</li></a>
-                   <a href="#container_projetos" onclick="closeMenu()"><li>Projetos</li></a>
-                   <a href="#container_contatos" onclick="closeMenu()"><li>Contatos</li></a>
+                   <a href="#" onclick="closeMenu()"><li>Inicio</li></a>
+                   <a href="#sobre" onclick="closeMenu()"><li>Sobre</li></a>
+                   <a href="#habilidades" onclick="closeMenu()"><li>Habilidades</li></a>
+                   <a href="#projetos" onclick="closeMenu()"><li>Projetos</li></a>
+                   <a href="#contatos" onclick="closeMenu()"><li>Contatos</li></a>
                 </center>
-
             </ul>
-
         </div>
     </div>
+    
     <div id="home_container">
         <div id="perfil">
-            <img src="{% static 'img/me.png' %}" style="border:5px solid white; border-radius: 50%;box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);">
-            <h1>Olá, Eu sou o Alexandre. <br> Prazer em conhece-lo!</h1>
+            <img src="{% static 'img/programador.png' %}" width="150rem">
+            <h2>Olá, Eu sou o Alexandre. <br> Prazer em conhece-lo!</h2>
         </div>
         <div id="container_button">
-            <a href="../static/img/Alexandre Cruz - Currículo.pdf" download>
-                <input type="button" class="btn_cheio" value="Download CV">
+            <a href="../static/img/Alexandre Cruz - Currículo.pdf" class="btn_cheio" download>Download CV</a>
+            <a href="https://wa.me/5521996924975" class="btn_vazio"  target="_blank">
+            Entre em contato
             </a>
-            <a href="https://wa.me/5521996924975"  target="_blank">
-                <input type="button" class="btn_vazio" value="Entre em contato">
-            </a>
+        </div>
+    </div>
+
+    <br><br>
+    <div id="container_habilidades">
+        <h2 id="habilidades">HABILIDADES</h2>
+        <div class="container_cards">
+            {% for habilidade in habilidades %}
+            <div class="card_habilidade">
+                <div class="circle_habilidade">
+                    {% load static %}
+                    <img src="../../media/{{habilidade.imagem}}" width="40vw" height="40vh">
+                </div>
+                <div class="nome_habilidade">{{habilidade.nome}}</div>
+            </div>
+            {% endfor %}
         </div>
     </div>
     <br><br>
-    <div id="container_contatos">
-        <h1 style="color:white;">SOBRE</h1>
+    <div id="container_sobre">
+        <h2 id="sobre" style="color:white">SOBRE</h2>
         
-        <p style="font-size: 2.5vw;">Desenvolvedor Web com experiência em Python, Django, Postgresql, JavaScript.
+        <p>Desenvolvedor Web com experiência em Python, Django, Postgresql e JavaScript.
             Estudante de Sistemas de Informação, cursando o 6º período e um apaixonado por tecnologia.
             Estou em busca de um estágio para além da obrigatoriedade da grade,
             mas com o objetivo de crescimento pessoal e profissional através de novos desafios. 
@@ -65,23 +77,10 @@
 
     </div>
     <br><br>
-    <div id="container_habilidades">
-        <h1>HABILIDADES</h1>
-        <div class="container_cards">
-            {% for habilidade in habilidades %}
-            <div class="card_habilidade">
-                <div class="circle_habilidade">
-                    {% load static %}
-                    <img src="../../media/{{habilidade.imagem}}" width="40vw" height="40vw">
-                </div>
-                <div class="nome_habilidade">{{habilidade.nome}}</div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-<br>
+   
+
     <div id="container_projetos">
-        <h1>PROJETOS</h1>
+        <h2 id="projetos">PROJETOS</h2>
         <div class="container_projeto_window">
             {% for projeto in projetos %}
                 <div class="projeto_window" >
@@ -93,7 +92,7 @@
     </div>
 <br>
     <div id="container_contatos">
-        <h1 style="color:white;">CONTATOS</h1>
+        <h2 id="contatos" style="color:white;">CONTATOS</h2>
         <div class="circles_center">
             <div class="container_circle_contatos">
                 {% for contato in contatos %}
